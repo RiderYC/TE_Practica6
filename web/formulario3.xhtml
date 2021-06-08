@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        
+    </h:head>
+    <h:body>
+        <h1>Registro de Producto</h1>
+        <h:form>
+            <h:panelGrid columns="3" columnClasses="alinder,alinizq,alinizq">
+                
+                <h:outputLabel value="Producto:" for="producto"/>
+                <h:inputText id="producto" label="Producto" required="true" value="#{registroBean3.producto}"/>
+                <h:message for="producto"/>
+                
+                <h:outputLabel value="Categoria:" for="categoria"/>
+                <h:selectOneMenu id="categoria" label="Categoria" value="#{registroBean3.categoria}">
+                    <f:selectItem itemLabel="" itemValue=""/>
+                    <f:selectItem itemLabel="Escritorio" itemValue="Escritorio"/>
+                    <f:selectItem itemLabel="Muebles" itemValue="Muebles"/>
+                    <f:selectItem itemLabel="Articulo de Cocina" itemValue="Articulo de Cocina"/>
+                </h:selectOneMenu>
+                <h:message for="categoria"/>
+                
+                <h:outputLabel value="Existencia:" for="existencia"/>
+                <h:inputText id="existencia" label="Existencia" required="true" value="#{registroBean3.existencia}"/>
+                <h:message for="existencia"/>
+                
+                <h:outputLabel value="Precio:" for="precio"/>
+                <h:inputText id="precio" label="Precio" size="2" required="true" value="#{registroBean3.precio}">
+                    <f:validateLongRange minimum="10" maximum="10000"/>
+                </h:inputText>
+                <h:message for="precio"/>   
+                
+                <h:panelGroup/>
+                <h:commandButton id="registro" value="Registro" action="confirmacion3"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

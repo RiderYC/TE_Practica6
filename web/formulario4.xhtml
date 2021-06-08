@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        
+    </h:head>
+    <h:body>
+        <h1>Formulario de registro</h1>
+        <h:form>
+            <h:panelGrid columns="3" columnClasses="alinder,alinizq,alinizq">
+
+                <h:outputLabel value="Titulo:" for="titulo"/>
+                <h:inputText id="titulo" label="Titulo" required="true" value="#{registroBean4.titulo}"/>
+                <h:message for="titulo"/>
+                
+                <h:outputLabel value="Autor:" for="autor"/>
+                <h:inputText id="autor" label="Autor" required="true" value="#{registroBean4.autor}"/>
+                <h:message for="autor"/>
+                
+                <h:outputLabel value="Resumen:" for="resumen"/>
+                <h:inputText id="resumen" label="Resumen" required="true" value="#{registroBean4.resumen}"/>
+                <h:message for="resumen"/>
+
+                <h:outputLabel value="Medio:" for="medio"/>
+                <h:selectOneRadio id="medio" label="Medio" value="#{registroBean4.medio}">
+                    <f:selectItem itemLabel="Fisico" itemValue="Fisico"/>
+                    <f:selectItem itemLabel="Magnetico" itemValue="Magnetico"/>
+                </h:selectOneRadio>
+                <h:message for="saludo"/>
+            
+                <h:panelGroup/>
+                <h:commandButton id="registro" value="Registro" action="confirmacion4"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
